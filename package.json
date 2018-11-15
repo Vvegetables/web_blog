@@ -1,0 +1,24 @@
+{
+  "name": "express-generator-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start" : "nodemon ./bin/www" ,
+    "both" : "concurrently \"npm start\" \"cd front-app && npm start\"",
+    "server" : "node server.js",
+    "client" : "node start-client.js"
+  },
+  "dependencies": {
+    "concurrently": "^4.0.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "serve-favicon": "^2.5.0"
+  }
+}
+
