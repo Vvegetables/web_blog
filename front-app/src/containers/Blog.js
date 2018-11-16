@@ -1,7 +1,7 @@
 import React,{ Component } from 'react'
 import PropTypes from 'prop-types'
 
-export default class HeaderComponent extends Component {
+export default class Blog extends Component {
     static propTypes = {
         title : PropTypes.string,
         desc : PropTypes.string,
@@ -21,6 +21,7 @@ export default class HeaderComponent extends Component {
                 <div>
                     <span>{this.props.commentNums}</span><span>{this.props.likeNums}</span>
                 </div>
+                <hr />
             </div>
         )
     }
