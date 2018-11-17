@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-import '../App.css';
+import '../static/css/App.css';
 import HeaderComponent from './Header'
 import BlogBodyLeft from './BlogBodyLeft';
+import BlogBodyRight from './BlogBodyRight';
 
 // import WordPreview from './containers/WordPreview';
 
@@ -22,7 +22,10 @@ class App extends Component {
     return (
       <div className="App">
         <HeaderComponent />
-        <BlogBodyLeft></BlogBodyLeft>
+        <div className="blog-container">
+            <BlogBodyLeft></BlogBodyLeft>
+            <BlogBodyRight></BlogBodyRight>
+        </div>
 
         {/* <button className="App-intro" onClick={this.fetchUsers.bind(this)}>
           click
