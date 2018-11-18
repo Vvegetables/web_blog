@@ -1,3 +1,7 @@
+.App {
+    text-align: center;
+}
+
 .blog-container{
     margin: 3% 0;
     width: 100%;
@@ -16,6 +20,7 @@
 
 .blog-header{
     height: 10%;
+    text-align: center;
 }
 
 .blog-header:after{
@@ -39,7 +44,8 @@
 }
 
 .blog-header-container-middle input{
-    font-size: 20px;
+    font-size: 16px;
+    width : 40%;
     /* border-radius: 10px; */
 }
 
@@ -75,4 +81,17 @@
     width: 20%;
     box-sizing: content-box;
     padding-right: 20%;
+}
+
+
+
+
+.react-a{
+    text-decoration: None;
+    color : black;
+}
+
+.react-a:hover{
+    text-decoration: underline;
+    color : gray;
 }

@@ -18,6 +18,7 @@ export default class CategoryList extends Component {
                     this.props.categories.map(
                         (category,i) => 
                             <Category
+                                key = {i}
                                 title={category.title}
                                 blogNums={category.blogNums}>
                             </Category>

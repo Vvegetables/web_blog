@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import '../static/css/App.css';
+import '../static/css/style.css';
 import HeaderComponent from './Header'
 import BlogBodyLeft from './BlogBodyLeft';
 import BlogBodyRight from './BlogBodyRight';
 
 // import WordPreview from './containers/WordPreview';
 
-class App extends Component {
+class BlogApp extends Component {
   constructor(){
     super()
     this.state = {
@@ -45,4 +45,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default BlogApp;

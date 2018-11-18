@@ -19,6 +19,22 @@ router.get('/load_more_blog',function(req,res,next){
     res.json(blogs)
 })
 
+router.get('/blog_detail',function(req,res,next){
+    // get 方式
+    // let = blogIdreq.query.blogId
+    // post 方式 需要bodyParser
+    // let username = req.body.username
+    var blogDetail = {
+        title : "博客明细",
+        desc : "明细内容xxxxxxxxx此处省略一万字",
+        commentNums : 100,
+        likeNums : 5,
+        readNums : 10000
+    }
+    console.log("detail")
+    res.json(blogDetail)
+})
+
 // router.get('/word/:filename',function(req,res){
 //     ;
 // })

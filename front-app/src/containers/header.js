@@ -20,11 +20,11 @@ export default class HeaderComponent extends Component {
                     <h3>博客</h3>
                 </div>
                 <div className="blog-header-container-middle">
-                    <img src="./icon/blog-header.png" className="header-icon" alt="首页"/>
+                    <img src="/icon/blog-header.png" className="header-icon" alt="首页"/>
                     <input placeholder="搜索" type="text"></input>
                 </div>
                 <div className="blog-header-container-right">
-                    <img src="./icon/blog-header.png" className="header-icon" />
+                    <img src="/icon/blog-header.png" className="header-icon" />
                     <span>登录</span><span>注册</span><span>写文章</span>
                 </div>
             </div>

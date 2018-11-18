@@ -17,10 +17,13 @@ export default class BlogList extends Component {
                 {
                     this.props.blogs.map((blog,i) => 
                     <Blog
-                    title={blog.title}
-                    desc={blog.desc}
-                    likeNums={blog.likeNums}
-                    commentNums={blog.commentNums}>
+                        key = {i}
+                        title={blog.title}
+                        desc={blog.desc}
+                        likeNums={blog.likeNums}
+                        commentNums={blog.commentNums}
+                        blogId={blog.blogId}
+                    >
                     </Blog>)
                 }
             </div>
