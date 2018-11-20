@@ -6,11 +6,17 @@ import BlogBodyRight from './BlogBodyRight';
 
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
+import BodyContainer from './BodyContainer';
 
 const panelReducer = (state,action) => {
   if (!state) return {
     //初始化state
-    blogs : []
+    blogs : [
+      {title:"博客1",desc:"xxxxxxxx1",likeNums:5,commentNums:8,blogId:1},
+      {title:"博客2",desc:"xxxxxxxx2",likeNums:5,commentNums:8,blogId:1},
+      {title:"博客3",desc:"xxxxxxxx3",likeNums:5,commentNums:8,blogId:1},
+      {title:"博客4",desc:"xxxxxxxx4",likeNums:5,commentNums:8,blogId:1}
+    ]
   }
   switch(action.type) {
     case 'BLOG_LIST':
@@ -30,23 +36,6 @@ const store = createStore(panelReducer)
 // import WordPreview from './containers/WordPreview';
 
 class BlogApp extends Component {
-  constructor(){
-    super()
-    this.state = {
-      users : [],
-      blogs : []
-    }
-  }
-
-  componentWillMount(){
-    const blogs = [
-      {title:"博客1",desc:"xxxxxxxx1",likeNums:5,commentNums:8,blogId:1},
-      {title:"博客2",desc:"xxxxxxxx2",likeNums:5,commentNums:8,blogId:1},
-      {title:"博客3",desc:"xxxxxxxx3",likeNums:5,commentNums:8,blogId:1},
-      {title:"博客4",desc:"xxxxxxxx4",likeNums:5,commentNums:8,blogId:1}
-    ]
-    this.setState({blogs:blogs})
-  }
 
   fetchUsers(){
     return fetch('api/users',{accpet: "application/json"}).then(res => {return res.json().then(json => {this.setState({users: json})})})
@@ -56,10 +45,7 @@ class BlogApp extends Component {
       <div className="App">
         <HeaderComponent />
         <Provider store={store}>
-          <div className="blog-container">
-              <BlogBodyLeft></BlogBodyLeft>
-              <BlogBodyRight></BlogBodyRight>
-          </div>
+          <BodyContainer />
         </Provider>
 
         {/* <button className="App-intro" onClick={this.fetchUsers.bind(this)}>

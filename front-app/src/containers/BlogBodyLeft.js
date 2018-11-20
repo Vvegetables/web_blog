@@ -38,23 +38,23 @@ class BlogBodyLeft extends Component {
     // static defaultProps = {
     //     src : ""
     // }
-    constructor(){
-        super()
-        this.state = {
-          users : [],
-          blogs : []
-        }
-    }
+    // constructor(){
+    //     super()
+    //     this.state = {
+    //       users : [],
+    //       blogs : []
+    //     }
+    // }
 
-    componentWillMount(){
-        const blogs = [
-          {title:"博客1",desc:"xxxxxxxx1",likeNums:5,commentNums:8,blogId:1},
-          {title:"博客2",desc:"xxxxxxxx2",likeNums:5,commentNums:8,blogId:1},
-          {title:"博客3",desc:"xxxxxxxx3",likeNums:5,commentNums:8,blogId:1},
-          {title:"博客4",desc:"xxxxxxxx4",likeNums:5,commentNums:8,blogId:1}
-        ]
-        this.setState({blogs:blogs})
-    }
+    // componentWillMount(){
+    //     const blogs = [
+    //       {title:"博客1",desc:"xxxxxxxx1",likeNums:5,commentNums:8,blogId:1},
+    //       {title:"博客2",desc:"xxxxxxxx2",likeNums:5,commentNums:8,blogId:1},
+    //       {title:"博客3",desc:"xxxxxxxx3",likeNums:5,commentNums:8,blogId:1},
+    //       {title:"博客4",desc:"xxxxxxxx4",likeNums:5,commentNums:8,blogId:1}
+    //     ]
+    //     this.setState({blogs:blogs})
+    // }
 
     _loadMoreBlogs(){
         if (this.props.loadMoreBlogs){
@@ -66,7 +66,7 @@ class BlogBodyLeft extends Component {
     render(){
         return (
             <div className="blog-body-left">
-                <BlogList blogs={this.state.blogs}></BlogList>
+                <BlogList blogs={this.props.blogs}></BlogList>
                 <LoadMoreButton click={this._loadMoreBlogs.bind(this)}></LoadMoreButton>
             </div>
         )
