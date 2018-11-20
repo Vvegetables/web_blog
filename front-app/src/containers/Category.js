@@ -13,7 +13,7 @@ export default class Category extends Component {
 
     render(){
         return (
-            <div>
+            <div onClick={this.props.onClick.bind(this,1)}>
                 <span>{this.props.title}</span><span>{"(" + this.props.blogNums + ")"}</span>
                 <hr />
             </div>

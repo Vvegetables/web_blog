@@ -1,5 +1,6 @@
 import React,{ Component } from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
 
 export default class HeaderComponent extends Component {
     static propTypes = {
@@ -17,7 +18,7 @@ export default class HeaderComponent extends Component {
         return (
             <div className="blog-header">
                 <div className="blog-header-container-left">
-                    <h3>博客</h3>
+                    <Link className="react-a" to="/"><h3>博客</h3></Link>
                 </div>
                 <div className="blog-header-container-middle">
                     <img src="/icon/blog-header.png" className="header-icon" alt="首页"/>

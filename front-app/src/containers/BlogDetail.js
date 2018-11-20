@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import HeaderComponent from './Header';
 
 
+
 export default class BlogDetail extends Component {
     static propTypes = {
         title : PropTypes.string,
@@ -10,6 +11,12 @@ export default class BlogDetail extends Component {
         commentNums : PropTypes.number,
         likeNums : PropTypes.number,
         blogId : PropTypes.number,
+    }
+
+    componentWillMount(){
+        // this.props的使用
+        console.log("blogId:",this.props.match.params.blogId)
+        this._fetchBlogDetail()
     }
 
     constructor(){
@@ -27,11 +34,9 @@ export default class BlogDetail extends Component {
     _fetchBlogDetail(){
         fetch('/api/blog_detail',{accpet: "application/json"})
             .then((response) => {
-                console.log(response)
                 return response.json();
             })
             .then((resJson) => {
-                console.log(resJson)
                 this.setState({
                     title : resJson.title,
                     desc : resJson.desc,
@@ -40,10 +45,6 @@ export default class BlogDetail extends Component {
                     blogId : resJson.blogId,
                 })
             })
-    }
-
-    componentWillMount(){
-        this._fetchBlogDetail()
     }
 
     render(){

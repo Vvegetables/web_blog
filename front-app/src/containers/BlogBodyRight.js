@@ -19,6 +19,7 @@ export default class BlogBodyRight extends Component {
         }
     }
 
+
     componentWillMount(){
         const categories = [
           {title:"博客类别1",blogNums:"7"},
@@ -32,7 +33,9 @@ export default class BlogBodyRight extends Component {
     render(){
         return (
             <div className="blog-body-right">
-                <CategoryList categories={this.state.categories}></CategoryList>
+                <CategoryList 
+                    categories={this.state.categories}>
+                </CategoryList>
             </div>
         )
     }

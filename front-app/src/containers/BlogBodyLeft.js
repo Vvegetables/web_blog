@@ -3,8 +3,34 @@ import PropTypes from 'prop-types'
 import BlogList from './BlogList';
 import LoadMoreButton from '../components/LoadMoreButton';
 
+import {connect} from 'react-redux'
 
-export default class BlogBodyLeft extends Component {
+const mapStateToProps = (state) => {
+    return {
+        blogs : state.blogs
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        loadMoreBlogs : () => {
+            fetch('/api/load_more_blog',{accpet: "application/json"}).then(
+                res => {
+                    console.log("category")
+                    return res.json().then(
+                        json => { // json is a list
+                            console.log("blogs:",json)
+                            dispatch({type : 'BLOG_LIST',blogs:json})
+                        }
+                    )
+                }
+            )
+            
+        }
+    }
+}
+
+class BlogBodyLeft extends Component {
     // static propTypes = {
     //     src : PropTypes.string
     // }
@@ -31,17 +57,10 @@ export default class BlogBodyLeft extends Component {
     }
 
     _loadMoreBlogs(){
-        return fetch('/api/load_more_blog',{accpet: "application/json"}).then(
-            res => {
-                return res.json().then(
-                    json => { // json is a list
-                        let _blogs = this.state.blogs
-                        _blogs = _blogs.concat(json)
-                        this.setState({blogs: _blogs})
-                    }
-                )
-            }
-        )
+        if (this.props.loadMoreBlogs){
+            this.props.loadMoreBlogs()
+        }
+        
     }    
 
     render(){
@@ -55,3 +74,5 @@ export default class BlogBodyLeft extends Component {
 
     
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(BlogBodyLeft)

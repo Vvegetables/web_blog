@@ -20,6 +20,7 @@ router.get('/load_more_blog',function(req,res,next){
 })
 
 router.get('/blog_detail',function(req,res,next){
+    console.log(req.params)
     // get 方式
     // let = blogIdreq.query.blogId
     // post 方式 需要bodyParser
@@ -31,7 +32,6 @@ router.get('/blog_detail',function(req,res,next){
         likeNums : 5,
         readNums : 10000
     }
-    console.log("detail")
     res.json(blogDetail)
 })
 
