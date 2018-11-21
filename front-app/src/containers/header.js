@@ -15,7 +15,6 @@ export default class HeaderComponent extends Component {
     };
 
     _searchBlog(event){
-        console.log("a")
         if(event.which === 13){
             console.log(event.target.value)
         };
