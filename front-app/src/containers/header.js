@@ -5,13 +5,20 @@ import {Link} from 'react-router-dom'
 export default class HeaderComponent extends Component {
     static propTypes = {
         name : PropTypes.string
-    }
+    };
 
     constructor(){
-        super()
+        super();
         this.state = {
             name : "博客"
-        }
+        };
+    };
+
+    _searchBlog(event){
+        console.log("a")
+        if(event.which === 13){
+            console.log(event.target.value)
+        };
     }
 
     render(){
@@ -22,7 +29,7 @@ export default class HeaderComponent extends Component {
                 </div>
                 <div className="blog-header-container-middle">
                     <img src="/icon/blog-header.png" className="header-icon" alt="首页"/>
-                    <input placeholder="搜索" type="text"></input>
+                    <input placeholder="搜索" type="text" onKeyDown={this._searchBlog}></input>
                 </div>
                 <div className="blog-header-container-right">
                     <img src="/icon/blog-header.png" className="header-icon" />
