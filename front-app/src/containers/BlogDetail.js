@@ -1,8 +1,5 @@
 import React,{ Component } from 'react'
 import PropTypes from 'prop-types'
-import HeaderComponent from './Header';
-
-
 
 export default class BlogDetail extends Component {
     static propTypes = {
@@ -50,7 +47,6 @@ export default class BlogDetail extends Component {
     render(){
         return (
             <div className="App">
-                <HeaderComponent/>
                 <h2>{this.state.title}</h2>
                 <p className="blog-list-desc">{this.state.desc}</p>
                 <div>

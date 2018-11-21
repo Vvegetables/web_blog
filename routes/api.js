@@ -12,9 +12,9 @@ router.get('/users',function(req,res,next){
 
 router.get('/load_more_blog',function(req,res,next){
     var blogs = [
-        {title:"LMB博客1",desc:'----------',likeNums:'4',commentNums:"5"},
-        {title:"LMB博客2",desc:'----------',likeNums:'4',commentNums:"5"},
-        {title:"LMB博客3",desc:'----------',likeNums:'4',commentNums:"5"},
+        {title:"LMB博客1",desc:'----------',likeNums:4,commentNums:5,blogId:1},
+        {title:"LMB博客2",desc:'----------',likeNums:4,commentNums:5,blogId:1},
+        {title:"LMB博客3",desc:'----------',likeNums:4,commentNums:5,blogId:1},
     ]
     res.json(blogs)
 })

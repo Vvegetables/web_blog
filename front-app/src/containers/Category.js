@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export default class Category extends Component {
     static propTypes = {
         title : PropTypes.string,
-        blogNums : PropTypes.string
+        blogNums : PropTypes.number
     }
 
     // constructor(){
