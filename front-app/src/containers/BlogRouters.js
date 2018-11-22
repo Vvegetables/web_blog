@@ -1,10 +1,12 @@
 import React from "react";
 import BlogApp from "./BlogApp"
-import {BrowserRouter as Router,Route} from "react-router-dom";
+import {BrowserRouter as Router,Route,Redirect} from "react-router-dom";
 import BlogDetail from "./BlogDetail";
 import HeaderComponent from "./Header";
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
+import LoginApp from "./LoginApp";
+import Redirection from "./Redirection";
 
 const panelReducer = (state,action) => {
     if (!state) return {
@@ -30,16 +32,31 @@ const panelReducer = (state,action) => {
   }
   
   const store = createStore(panelReducer)
-const BlogRouter = () => (
+
+
+  const BlogRouter = () => (
     <Router>
         <Provider store={store}>
             <div>
-                <Route path="/" component={HeaderComponent} />
-                <Route path="/" exact component={BlogApp} />
+                
+                {/* <Redirect exact from="/"  to="/blog"/> */}
+                <Route path="/" exact component={Redirection}></Route>
+                <Route path="/blog" component={HeaderComponent} />
+                <Route path="/blog" exact component={BlogApp} />
                 <Route path="/detail/:blogId" component={BlogDetail} />
+                <Route path="/sign_in" exact component={LoginRoute}/>
+                
             </div>
         </Provider>
     </Router>
 )
 
-export default BlogRouter
+const LoginRoute = () => (
+    <Router>
+        <div>
+            <Route path="/sign_in" exact component={LoginApp}/>
+        </div>
+    </Router>
+)
+
+export {BlogRouter}

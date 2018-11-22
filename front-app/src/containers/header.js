@@ -35,7 +35,7 @@ export default class HeaderComponent extends Component {
                 </div>
                 <div className="blog-header-container-right">
                     <img src="/icon/blog-header.png" className="header-icon" />
-                    <span>登录</span><span>注册</span><span>写文章</span>
+                    <Link to="/sign_in"><span>登录</span></Link><span>注册</span><span>写文章</span>
                 </div>
             </div>
         )
