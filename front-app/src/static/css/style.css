@@ -96,6 +96,41 @@
     color : gray;
 }
 
+.kk{
+    text-align: center;
+}
+
+.more-sign{
+    position: relative;
+}
+.login-line:before{
+    /* border-width: 20%; */
+    
+    content: "";
+    border-top: 1px solid gray;
+    display: block;
+    width: 50%;
+    position: absolute;
+    top:8px;
+}
+
+.login-line:after{
+    content: "";
+    border-top: 1px solid gray;
+    display: block;
+    width: 50%;
+    position: absolute;
+    top:8px;
+}
+
+.login-line:before{
+    left:-10%;
+}
+
+.login-line:after{
+    right:-10%;
+}
+
 .login-bottom ul{
     list-style : none;
     padding: 0;
