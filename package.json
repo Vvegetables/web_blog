@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start" : "nodemon ./bin/www" ,
-    "both" : "concurrently \"npm start\" \"cd front-app && npm start\"",
-    "server" : "node server.js",
-    "client" : "node start-client.js"
+    "start": "nodemon ./bin/www",
+    "both": "concurrently \"npm start\" \"cd front-app && npm start\"",
+    "server": "node server.js",
+    "client": "node start-client.js"
   },
   "dependencies": {
+    "braft-editor": "^2.1.31",
     "concurrently": "^4.0.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
@@ -21,4 +22,3 @@
     "serve-favicon": "^2.5.0"
   }
 }
-

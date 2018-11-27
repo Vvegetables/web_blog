@@ -7,6 +7,8 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import LoginApp from "./LoginApp";
 import Redirection from "./Redirection";
+import RichTextEditor from "./RichTextEditor";
+import RichTextEditor2 from "./RichTextEditor2";
 
 const panelReducer = (state,action) => {
     if (!state) return {
@@ -43,6 +45,7 @@ const panelReducer = (state,action) => {
                 <Route path="/" exact component={Redirection}></Route>
                 <Route path="/blog" component={HeaderComponent} />
                 <Route path="/blog" exact component={BlogApp} />
+                <Route path="/blog/edit" component={RichTextEditor2}></Route>
                 <Route path="/detail/:blogId" component={BlogDetail} />
                 <Route path="/sign_in" exact component={LoginRoute}/>
                 

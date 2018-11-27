@@ -1,6 +1,8 @@
+import '../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import React,{ Component } from 'react'
 import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
+import FileUpload from '../components/FileUpload';
 
 export default class HeaderComponent extends Component {
     static propTypes = {
@@ -35,7 +37,10 @@ export default class HeaderComponent extends Component {
                 </div>
                 <div className="blog-header-container-right">
                     <img src="/icon/blog-header.png" className="header-icon" />
-                    <Link to="/sign_in"><span>登录</span></Link><span>注册</span><span>写文章</span>
+                    <Link className="react-a" to="/sign_in"><span>登录</span></Link>
+                    <span>注册</span>
+                    <Link className="react-a" to="/blog/edit"><span>写文章</span></Link>
+                    <FileUpload/>
                 </div>
             </div>
         )
