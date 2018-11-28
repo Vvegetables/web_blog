@@ -5,7 +5,7 @@ export default class LoginBottom extends Component{
     
     render(){
         return (
-            <div className="kk">
+            <div className="login-bottom-container">
                 <div className="more-sign">
                     <h6 className="login-line">其他登录方式</h6>
                 

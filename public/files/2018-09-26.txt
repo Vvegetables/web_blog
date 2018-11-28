@@ -1,0 +1,28 @@
+OAuth������
+
+f-string 
+	f'{str-name}'
+
+ipadress ģ��
+	net = ipaddress.ip_network('123.45.67.64/27')
+	a = ipaddress.ip_address('123.45.67.69')
+
+REST��񣿣�����
+	https://www.cnblogs.com/loveis715/p/4669091.html
+
+cgi ģ��
+	cgi.FieldStorage(...)
+
+ͼ��http������
+
+multiprocess ģ��
+
+rpc Զ�̵���
+
+hmacģ��
+
+ʱ�����������������
+
+�������������
+
+sslģ��

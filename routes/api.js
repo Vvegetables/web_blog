@@ -1,5 +1,17 @@
 var express = require('express')
+var fs = require("fs");
+path = require('path');
 var router = express.Router()
+
+router.post('/profile',function(req,res,next){
+    console.log(req.file.path)
+    console.log(path.dirname(__dirname));
+    let base = path.dirname(__dirname)
+    var des_file = path.join(base,req.file.destination,req.file.originalname)
+    content = fs.readFileSync(req.file.path)
+    fs.writeFileSync(des_file,content,{mode:0x777})
+    res.end(JSON.stringify({data:"success"}))
+})
 
 router.get('/users',function(req,res,next){
     var nums = [

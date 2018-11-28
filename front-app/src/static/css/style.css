@@ -83,9 +83,6 @@
     padding-right: 20%;
 }
 
-
-
-
 .react-a{
     text-decoration: None;
     color : black;
@@ -103,6 +100,13 @@
 .more-sign{
     position: relative;
 }
+
+/* .login-line{
+    width: 20%;
+    margin-left: auto; 
+    margin-right: auto;
+} */
+
 .login-line:before{
     /* border-width: 20%; */
     
@@ -112,6 +116,7 @@
     width: 50%;
     position: absolute;
     top:8px;
+    left:-10%;
 }
 
 .login-line:after{
@@ -121,20 +126,25 @@
     width: 50%;
     position: absolute;
     top:8px;
-}
-
-.login-line:before{
-    left:-10%;
-}
-
-.login-line:after{
     right:-10%;
+}
+
+.login-bottom{
+    text-align: center;
 }
 
 .login-bottom ul{
     list-style : none;
     padding: 0;
-    margin: 0;
+    margin-left: auto; 
+    margin-right: auto;
+    width: 20%;
+}
+
+.login-bottom ul:after{
+    clear: both;
+    content : '';
+    display: table;
 }
 
 .login-bottom li{
@@ -142,6 +152,8 @@
     list-style : none;
     padding-left: 5px;
 }
+
+
 /* .editor-container{
     text-align: center;
 } */
@@ -151,3 +163,21 @@
     margin-right: 20%;
     margin-left: 20%;
 }
+
+.login-frame{
+    text-align: center;
+}
+.login-body{
+    text-align: left;
+    border : 1px solid #000;
+    width: 20%; 
+    margin-left: auto; 
+    margin-right: auto;
+    padding : 2%;
+}
+
+
+/* .login-bottom-container{
+    text-align: center;
+    border: 1px solid #000;
+} */

@@ -1,0 +1,81 @@
+﻿es6
+nodejs 了不起的node
+Yarn 是 Facebook, Google, Exponent 和 Tilde 开发的一款新的 JavaScript 包管理工具。就像我们可以从官方文档了解那样，它的目的是解决这些团队使用 npm 面临的少数问题
+
+更新node版本
+	npm install npm@latest -g
+
+where node
+	检查安装node的路径。
+
+node express web框架
+	express 应用程序生成器
+	npm install  express-generator -g
+	npm install  serve-favicon 服务器favicon
+
+	npm install -g nodemon 安装这个主要是在开发时不用重启express 
+	启动程序：
+	SET DEBUG=express-generator-app:* & npm start
+	
+	利用Express托管静态文件
+	express.static()
+	for example:
+		app.use(express.static("root"))
+		app.use('/static',express.static("files"))
+
+	处理404响应
+	app.use(function(req,res,next){
+		res.status(404).send("Sorry can't find that!")
+	})
+	错误处理器
+	app.use(function(err,req,res,next){
+		console.error(err.stack)
+		res.status(500).send('Something broke!")
+	})
+
+reactjs 前端框架
+
+中文react社区
+	https://react.docschina.org/community/examples.html
+
+	npm install react --save
+	npm install react-dom --save
+	npm install -g create-react-app 
+	npm install --save prop-types
+
+	reactjs工程的package.json，加入新的参数。作用是做一个代理，将向3000端口的请求转为请求3005端口。这样在将来发布时也不会有问题
+	"proxy": "http://localhost:3005/",
+
+	react-fetch:
+	fetch在React-js中相当于XMLHttpRequest
+	由于 Fetch API 是基于 Promise 设计，有必要先学习一下 Promise
+	网址：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+	react + express
+	https://blog.csdn.net/xgbm_k/article/details/78205362
+
+react-router(react 路由教程)
+	http://www.ruanyifeng.com/blog/2016/05/react_router.html
+
+	https://blog.csdn.net/sinat_17775997/article/details/69218382
+
+	http://react-guide.github.io/react-router-cn/docs/guides/basics/RouteConfiguration.html
+	
+	https://reacttraining.com/react-router/core/guides/philosophy
+
+	https://www.jianshu.com/p/bf6b45ce5bcc
+
+	https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom/docs/guides
+
+redux-js：
+	https://cn.redux.js.org/docs/introduction/ThreePrinciples.html
+
+
+阿里巴巴图标：
+	下载图标
+
+搭一个博客应用
+nodejs runkit第三方应用
+看完 陆犯焉识
+
+写一篇《《跨域资源共享 CORS 详解》》

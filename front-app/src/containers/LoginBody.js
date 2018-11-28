@@ -5,7 +5,7 @@ export default class LoginBody extends Component{
     
     render(){
         return (
-            <div>
+            <div className="login-body">
                 <div>
                     <input type="text" placeholder="请输入用户名" />
                 </div>
